@@ -28,6 +28,9 @@ def states_guess():
             t.goto(0,0)
             t.write(f"{"GAME OVER"}", align='center', font=('Courier', 34, 'normal'))
     if answer == "Exit":
+        missing_states = [state for state in states_list] #using list comp
+        for state in missing_states:
+            print(state)
         exit(0)
 
 game_is_on = True
